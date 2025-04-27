@@ -1,0 +1,139 @@
+body, html {
+    margin: 0;
+    overflow: hidden;
+    background: black;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7rem 2rem;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    box-sizing: border-box;
+  }
+
+  .logo {
+    color: #00ffff;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px #00ffff;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+  }
+
+  nav a:hover {
+    color: #00ffff;
+    transform: scale(1.1);
+  }
+
+  canvas {
+    display: block;
+  }
+
+  #header-text {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    color: #00ffff;
+    font-size: 5rem;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+    z-index: 10;
+    pointer-events: none;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  nav lord-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* --- ریسپانسیو --- */
+
+  @media (max-width: 1024px) {
+    header {
+      padding: 0.5rem 1.5rem;
+    }
+    .logo {
+      font-size: 1.5rem;
+    }
+    nav a {
+      font-size: 0.9rem;
+      gap: 0.3rem;
+    }
+    #header-text {
+      font-size: 4rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    nav {
+      gap: 1rem;
+    }
+    .logo {
+      font-size: 1.3rem;
+    }
+    nav a {
+      font-size: 0.8rem;
+    }
+    nav lord-icon {
+      width: 24px;
+      height: 24px;
+    }
+    #header-text {
+      font-size: 3rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0.5rem 1rem;
+    }
+    nav {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+    nav a {
+      font-size: 0.7rem;
+      padding: 0.3rem 0.5rem;
+    }
+    nav lord-icon {
+      width: 20px;
+      height: 20px;
+    }
+    #header-text {
+      font-size: 2.2rem;
+      top: 35%;
+    }
+  }
